@@ -1,0 +1,2624 @@
+[
+    {
+        "id": "3f071b089819a85a",
+        "type": "tab",
+        "label": "OPC UA",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2112e6cdefa0a28d",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "Cervejaria.azure-devices.net",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "status",
+        "birthQos": "0",
+        "birthRetain": "true",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "status",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "08630897d509378a",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://10.116.83.5:4840",
+        "secpol": "None",
+        "secmode": "None",
+        "none": false,
+        "login": false,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
+    },
+    {
+        "id": "7dc1f484bd4d2798",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "63f708700c8e8c7f",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "78b82db38b5e2d78",
+        "type": "ui_tab",
+        "name": "Gráfico Fervura",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "0f416a89f69965e9",
+        "type": "ui_tab",
+        "name": "Gráfico Água Quente",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "48a0ec8571af43e5",
+        "type": "ui_tab",
+        "name": "Gráfico Trocador de Calor",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ef8c9b40c58be48e",
+        "type": "ui_tab",
+        "name": "Gráfico Brassagem",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b4b5054b5011a136",
+        "type": "ui_group",
+        "d": true,
+        "name": "Botão Virtual",
+        "tab": "63f708700c8e8c7f",
+        "order": 5,
+        "disp": true,
+        "width": "7",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d045d03c2fa71e8e",
+        "type": "ui_group",
+        "name": "Gráfico Fervura",
+        "tab": "78b82db38b5e2d78",
+        "order": 1,
+        "disp": true,
+        "width": 28,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9389dd4d08049608",
+        "type": "ui_group",
+        "name": "Gráfico Água Quente",
+        "tab": "0f416a89f69965e9",
+        "order": 1,
+        "disp": true,
+        "width": 28,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c0c9a5387de52740",
+        "type": "ui_group",
+        "name": "Gráfico Trocador de Calor",
+        "tab": "48a0ec8571af43e5",
+        "order": 1,
+        "disp": true,
+        "width": 28,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "062c8f26ed5d8543",
+        "type": "ui_group",
+        "name": "Brassagem",
+        "tab": "63f708700c8e8c7f",
+        "order": 1,
+        "disp": true,
+        "width": "7",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ace7d5b75ebe2630",
+        "type": "ui_group",
+        "name": "Fervura",
+        "tab": "63f708700c8e8c7f",
+        "order": 2,
+        "disp": true,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "720a4d604b9abdc3",
+        "type": "ui_group",
+        "name": "Trocador de Calor",
+        "tab": "63f708700c8e8c7f",
+        "order": 4,
+        "disp": true,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "eb7d0194aeaddda1",
+        "type": "ui_group",
+        "name": "Grafico Brassagem",
+        "tab": "ef8c9b40c58be48e",
+        "order": 6,
+        "disp": true,
+        "width": 28,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c41f65a39a99c675",
+        "type": "ui_group",
+        "name": "Velocidade Motores",
+        "tab": "63f708700c8e8c7f",
+        "order": 8,
+        "disp": true,
+        "width": "7",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "873eb4801af42253",
+        "type": "ui_group",
+        "name": "Chaves Resistências",
+        "tab": "63f708700c8e8c7f",
+        "order": 6,
+        "disp": true,
+        "width": "7",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1cca622b57be5b10",
+        "type": "ui_group",
+        "name": "Chaves Painel",
+        "tab": "63f708700c8e8c7f",
+        "order": 7,
+        "disp": true,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c528815552b71b5e",
+        "type": "ui_group",
+        "name": "Água Quente",
+        "tab": "63f708700c8e8c7f",
+        "order": 3,
+        "disp": true,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ef85ba30baf4e863",
+        "type": "ui_group",
+        "name": "Receita",
+        "tab": "63f708700c8e8c7f",
+        "order": 9,
+        "disp": true,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7ed68fbe18b180e6",
+        "type": "websocket-listener",
+        "path": "",
+        "wholemsg": "false"
+    },
+    {
+        "id": "1e30571e2896ea52",
+        "type": "inject",
+        "z": "3f071b089819a85a",
+        "name": "Timer 5s",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 680,
+        "wires": [
+            [
+                "d1f7ec0177030757",
+                "8bc8eff260196a1a",
+                "ea7ad430b81815b8",
+                "25828f9bb6ec6bf1",
+                "89b8f3e38860e164",
+                "e634cce6895afc52",
+                "d4b02313169be438",
+                "7ce2fefb3c3a98d4",
+                "eeaabc9aebfb4f40",
+                "2baf422cef74d4e4",
+                "162045818dad3490",
+                "3587e477d1876b7f",
+                "daf1f57f837069ec",
+                "6010dfe1de76d5bb",
+                "553f1d83096ecc9d",
+                "3bb924ca6b9071ac",
+                "1767dee18d6ccefd",
+                "77d59222a39128f9",
+                "347bc21f072d3e31"
+            ]
+        ]
+    },
+    {
+        "id": "fa59844b26ca116f",
+        "type": "debug",
+        "z": "3f071b089819a85a",
+        "name": "Brassagem",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1390,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "d920446ddac5e0f1",
+        "type": "debug",
+        "z": "3f071b089819a85a",
+        "name": "Fervura",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1380,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "60e26071ebefddb6",
+        "type": "debug",
+        "z": "3f071b089819a85a",
+        "name": "Água Quente",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1390,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "f3320585a4290950",
+        "type": "debug",
+        "z": "3f071b089819a85a",
+        "name": "Trocador de Calor",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1410,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "ecc4345352d0c346",
+        "type": "switch",
+        "z": "3f071b089819a85a",
+        "name": "Switch",
+        "property": "browseName",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "PT100 - Brassagem",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Setpoint - Brassagem",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "PWM - Brassagem",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1170,
+        "y": 220,
+        "wires": [
+            [
+                "4a06a96b2c5d5558",
+                "fa59844b26ca116f",
+                "893755d27bab453f"
+            ],
+            [
+                "fa59844b26ca116f",
+                "893755d27bab453f"
+            ],
+            [
+                "fa59844b26ca116f",
+                "893755d27bab453f"
+            ]
+        ]
+    },
+    {
+        "id": "686cd8b3831aae63",
+        "type": "switch",
+        "z": "3f071b089819a85a",
+        "name": "Switch",
+        "property": "browseName",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "PT100 - Fervura",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Setpoint - Fervura",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "PWM - Fervura",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1170,
+        "y": 400,
+        "wires": [
+            [
+                "82f212dea33d4969",
+                "1ebfec926eae37b7",
+                "d920446ddac5e0f1"
+            ],
+            [
+                "1ebfec926eae37b7",
+                "d920446ddac5e0f1"
+            ],
+            [
+                "1ebfec926eae37b7",
+                "d920446ddac5e0f1"
+            ]
+        ]
+    },
+    {
+        "id": "d767f556cae0c265",
+        "type": "switch",
+        "z": "3f071b089819a85a",
+        "name": "Switch",
+        "property": "browseName",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "PT100 - Água Quente",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Setpoint - Água Quente",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "PWM - Água Quente",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1170,
+        "y": 560,
+        "wires": [
+            [
+                "6acee9c889ef14e6",
+                "60e26071ebefddb6",
+                "0edef3e9d96d1b18"
+            ],
+            [
+                "6acee9c889ef14e6",
+                "60e26071ebefddb6"
+            ],
+            [
+                "6acee9c889ef14e6",
+                "60e26071ebefddb6"
+            ]
+        ]
+    },
+    {
+        "id": "ebca8fa10ff0fcaf",
+        "type": "switch",
+        "z": "3f071b089819a85a",
+        "name": "Switch",
+        "property": "browseName",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "PT100 - Trocador de Calor",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1170,
+        "y": 720,
+        "wires": [
+            [
+                "959b7040bfc7f432",
+                "d88fb71e0655d7c6",
+                "f3320585a4290950"
+            ]
+        ]
+    },
+    {
+        "id": "6475a822943c4cf7",
+        "type": "switch",
+        "z": "3f071b089819a85a",
+        "name": "Switch",
+        "property": "browseName",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Chave Mostura",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Chave Fervura",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Chave Água Quente",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Chave Agitador",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Chave Bomba 1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Chave Bomba 2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 6,
+        "x": 1170,
+        "y": 840,
+        "wires": [
+            [
+                "29ff8f5319e454f0",
+                "77c7f4d2f37aac48"
+            ],
+            [
+                "29ff8f5319e454f0",
+                "f9460abdf95250ea"
+            ],
+            [
+                "29ff8f5319e454f0",
+                "9f7a4e2bf80dc1f7"
+            ],
+            [
+                "29ff8f5319e454f0",
+                "b851924e080acea0"
+            ],
+            [
+                "29ff8f5319e454f0",
+                "2a87c136335dc235"
+            ],
+            [
+                "29ff8f5319e454f0",
+                "414e5743b07e8870"
+            ]
+        ]
+    },
+    {
+        "id": "29ff8f5319e454f0",
+        "type": "debug",
+        "z": "3f071b089819a85a",
+        "name": "Chaves",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1380,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "de9b46311bd9c63e",
+        "type": "switch",
+        "z": "3f071b089819a85a",
+        "name": "Switch",
+        "property": "browseName",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Velocidade Bomba 1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Velocidade Bomba 2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1170,
+        "y": 1100,
+        "wires": [
+            [
+                "9dacc7d9c3b0f87f"
+            ],
+            [
+                "8f5f0d2850d0d945"
+            ]
+        ]
+    },
+    {
+        "id": "1ef61ef3502f7d9e",
+        "type": "switch",
+        "z": "3f071b089819a85a",
+        "name": "Switch",
+        "property": "browseName",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Receita Nome",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1170,
+        "y": 1260,
+        "wires": [
+            [
+                "2f8b32b91d1fe27e"
+            ]
+        ]
+    },
+    {
+        "id": "9c48447fca25f4d3",
+        "type": "exec",
+        "z": "3f071b089819a85a",
+        "command": "tshark -i eno1 -a duration:10 -w output.pcap",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "20",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Record tshark",
+        "x": 400,
+        "y": 1480,
+        "wires": [
+            [
+                "90dfa363943f6f40",
+                "61e27377bab5451c"
+            ],
+            [
+                "c708b9da35275c1c"
+            ],
+            [
+                "92915326c1ecc37e"
+            ]
+        ]
+    },
+    {
+        "id": "92915326c1ecc37e",
+        "type": "debug",
+        "z": "3f071b089819a85a",
+        "name": "Return Code",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 1573,
+        "wires": []
+    },
+    {
+        "id": "8977da7df33eaef9",
+        "type": "inject",
+        "z": "3f071b089819a85a",
+        "name": "Record Manual",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 1480,
+        "wires": [
+            [
+                "9c48447fca25f4d3"
+            ]
+        ]
+    },
+    {
+        "id": "3c46a61a8b6e0805",
+        "type": "inject",
+        "z": "3f071b089819a85a",
+        "name": "Extract Manual",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 400,
+        "y": 1573,
+        "wires": [
+            [
+                "90dfa363943f6f40"
+            ]
+        ]
+    },
+    {
+        "id": "90dfa363943f6f40",
+        "type": "exec",
+        "z": "3f071b089819a85a",
+        "command": "python /root/Extract_pcap.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Extract_pcap2csv",
+        "x": 670,
+        "y": 1473,
+        "wires": [
+            [
+                "61e27377bab5451c",
+                "0f99fd622a49dc94"
+            ],
+            [
+                "c708b9da35275c1c"
+            ],
+            [
+                "92915326c1ecc37e"
+            ]
+        ]
+    },
+    {
+        "id": "0f99fd622a49dc94",
+        "type": "exec",
+        "z": "3f071b089819a85a",
+        "command": "python /root/MLP.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "RNA - MLP",
+        "x": 950,
+        "y": 1473,
+        "wires": [
+            [
+                "61e27377bab5451c",
+                "59f483515d2c7344"
+            ],
+            [
+                "c708b9da35275c1c"
+            ],
+            [
+                "92915326c1ecc37e"
+            ]
+        ]
+    },
+    {
+        "id": "37d689e8dab46e80",
+        "type": "inject",
+        "z": "3f071b089819a85a",
+        "name": "MLP Manual",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 870,
+        "y": 1573,
+        "wires": [
+            [
+                "0f99fd622a49dc94"
+            ]
+        ]
+    },
+    {
+        "id": "7d08424eaa2f476d",
+        "type": "exec",
+        "z": "3f071b089819a85a",
+        "command": "sudo tshark -i eno1 -Y pn_io -a duration:10 -w output.pcap",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "20",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Record tshark",
+        "x": 360,
+        "y": 1180,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c708b9da35275c1c",
+        "type": "debug",
+        "z": "3f071b089819a85a",
+        "name": "Error",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 1613,
+        "wires": []
+    },
+    {
+        "id": "61e27377bab5451c",
+        "type": "debug",
+        "z": "3f071b089819a85a",
+        "name": "Output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 1653,
+        "wires": []
+    },
+    {
+        "id": "48a7383a656b97ca",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "ns=4;i=52",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "Bomba 1",
+        "x": 380,
+        "y": 80,
+        "wires": [
+            [
+                "23b636e4829c0583"
+            ]
+        ]
+    },
+    {
+        "id": "c9a8b1ddd772639d",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "ns=4;i=53",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "Bomba 2",
+        "x": 380,
+        "y": 120,
+        "wires": [
+            [
+                "23b636e4829c0583"
+            ]
+        ]
+    },
+    {
+        "id": "4f0392057f400dea",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "ns=4;i=51",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "Agitador",
+        "x": 380,
+        "y": 160,
+        "wires": [
+            [
+                "23b636e4829c0583"
+            ]
+        ]
+    },
+    {
+        "id": "d1f7ec0177030757",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "PT100 - Fervura : ns=4;i=56",
+        "datatype": "Float",
+        "value": "",
+        "name": "PT100 - Fervura",
+        "x": 420,
+        "y": 440,
+        "wires": [
+            [
+                "4151e3adeae16b83"
+            ]
+        ]
+    },
+    {
+        "id": "8bc8eff260196a1a",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "Setpoint - Fervura : ns=4;i=799",
+        "datatype": "Float",
+        "value": "",
+        "name": "Setpoint - Fervura",
+        "x": 430,
+        "y": 480,
+        "wires": [
+            [
+                "4151e3adeae16b83"
+            ]
+        ]
+    },
+    {
+        "id": "ea7ad430b81815b8",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "PWM - Fervura : ns=4;i=1139",
+        "datatype": "Double",
+        "value": "",
+        "name": "PWM - Fervura",
+        "x": 420,
+        "y": 520,
+        "wires": [
+            [
+                "4151e3adeae16b83"
+            ]
+        ]
+    },
+    {
+        "id": "25828f9bb6ec6bf1",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "PT100 - Água Quente : ns=4;i=55",
+        "datatype": "Float",
+        "value": "",
+        "name": "PT100 - Água Quente",
+        "x": 440,
+        "y": 580,
+        "wires": [
+            [
+                "4151e3adeae16b83"
+            ]
+        ]
+    },
+    {
+        "id": "89b8f3e38860e164",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "Setpoint - Água Quente : ns=4;i=6",
+        "datatype": "Float",
+        "value": "",
+        "name": "Setpoint - Água Quente",
+        "x": 450,
+        "y": 620,
+        "wires": [
+            [
+                "4151e3adeae16b83"
+            ]
+        ]
+    },
+    {
+        "id": "e634cce6895afc52",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "PWM - Água Quente : ns=4;i=1341",
+        "datatype": "Double",
+        "value": "",
+        "name": "PWM - Água Quente",
+        "x": 440,
+        "y": 660,
+        "wires": [
+            [
+                "4151e3adeae16b83"
+            ]
+        ]
+    },
+    {
+        "id": "d4b02313169be438",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "PT100 - Trocador de Calor : ns=4;i=54",
+        "datatype": "Float",
+        "value": "",
+        "name": "PT100 - Trocador de Calor",
+        "x": 460,
+        "y": 720,
+        "wires": [
+            [
+                "4151e3adeae16b83"
+            ]
+        ]
+    },
+    {
+        "id": "7ce2fefb3c3a98d4",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "PT100 - Brassagem : ns=4;i=57",
+        "datatype": "Float",
+        "value": "",
+        "name": "PT100 - Brassagem",
+        "x": 440,
+        "y": 300,
+        "wires": [
+            [
+                "4151e3adeae16b83"
+            ]
+        ]
+    },
+    {
+        "id": "eeaabc9aebfb4f40",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "Setpoint - Brassagem : ns=4;i=13",
+        "datatype": "Float",
+        "value": "",
+        "name": "Setpoint - Brassagem",
+        "x": 440,
+        "y": 340,
+        "wires": [
+            [
+                "4151e3adeae16b83"
+            ]
+        ]
+    },
+    {
+        "id": "2baf422cef74d4e4",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "PWM - Brassagem : ns=4;i=1249",
+        "datatype": "Double",
+        "value": "",
+        "name": "PWM - Brassagem",
+        "x": 430,
+        "y": 380,
+        "wires": [
+            [
+                "4151e3adeae16b83"
+            ]
+        ]
+    },
+    {
+        "id": "162045818dad3490",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "Chave Mostura : ns=4;i=1428",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "Chave Mostura",
+        "x": 420,
+        "y": 780,
+        "wires": [
+            [
+                "4151e3adeae16b83"
+            ]
+        ]
+    },
+    {
+        "id": "3587e477d1876b7f",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "Chave Fervura : ns=4;i=1427",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "Chave Fervura",
+        "x": 420,
+        "y": 820,
+        "wires": [
+            [
+                "4151e3adeae16b83"
+            ]
+        ]
+    },
+    {
+        "id": "daf1f57f837069ec",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "Chave Água Quente : ns=4;i=1424",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "Chave Água Quente",
+        "x": 440,
+        "y": 860,
+        "wires": [
+            [
+                "4151e3adeae16b83"
+            ]
+        ]
+    },
+    {
+        "id": "6010dfe1de76d5bb",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "Chave Agitador : ns=4;i=1423",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "Chave Agitador",
+        "x": 420,
+        "y": 900,
+        "wires": [
+            [
+                "4151e3adeae16b83"
+            ]
+        ]
+    },
+    {
+        "id": "553f1d83096ecc9d",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "Chave Bomba 1 : ns=4;i=1425",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "Chave Bomba 1",
+        "x": 420,
+        "y": 940,
+        "wires": [
+            [
+                "4151e3adeae16b83"
+            ]
+        ]
+    },
+    {
+        "id": "3bb924ca6b9071ac",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "Chave Bomba 2 : ns=4;i=1426",
+        "datatype": "Boolean",
+        "value": "",
+        "name": "Chave Bomba 2",
+        "x": 420,
+        "y": 980,
+        "wires": [
+            [
+                "4151e3adeae16b83"
+            ]
+        ]
+    },
+    {
+        "id": "1767dee18d6ccefd",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "Velocidade Bomba 1 : ns=4;i=789",
+        "datatype": "Float",
+        "value": "",
+        "name": "Velocidade Bomba 1",
+        "x": 440,
+        "y": 1020,
+        "wires": [
+            [
+                "4151e3adeae16b83"
+            ]
+        ]
+    },
+    {
+        "id": "77d59222a39128f9",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "Velocidade Bomba 2 : ns=4;i=787",
+        "datatype": "Float",
+        "value": "",
+        "name": "Velocidade Bomba 2",
+        "x": 440,
+        "y": 1060,
+        "wires": [
+            [
+                "4151e3adeae16b83"
+            ]
+        ]
+    },
+    {
+        "id": "347bc21f072d3e31",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "ns=4;i=1020",
+        "datatype": "String",
+        "value": "",
+        "name": "Receita Nome",
+        "x": 420,
+        "y": 1120,
+        "wires": [
+            [
+                "4151e3adeae16b83"
+            ]
+        ]
+    },
+    {
+        "id": "4151e3adeae16b83",
+        "type": "OpcUa-Client",
+        "z": "3f071b089819a85a",
+        "endpoint": "08630897d509378a",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": "5",
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "useTransport": false,
+        "maxChunkCount": "",
+        "maxMessageSize": "",
+        "receiveBufferSize": "",
+        "sendBufferSize": "",
+        "name": "OPC UA_Read",
+        "x": 840,
+        "y": 680,
+        "wires": [
+            [
+                "ecc4345352d0c346",
+                "686cd8b3831aae63",
+                "ebca8fa10ff0fcaf",
+                "d767f556cae0c265",
+                "6475a822943c4cf7",
+                "de9b46311bd9c63e",
+                "1ef61ef3502f7d9e"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "23b636e4829c0583",
+        "type": "OpcUa-Client",
+        "z": "3f071b089819a85a",
+        "endpoint": "08630897d509378a",
+        "action": "write",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "name": "OPC UA_Write",
+        "x": 620,
+        "y": 120,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9ed4abad575943e8",
+        "type": "ui_switch",
+        "z": "3f071b089819a85a",
+        "name": "Bomba 1",
+        "label": "Bomba 1",
+        "tooltip": "",
+        "group": "b4b5054b5011a136",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 180,
+        "y": 80,
+        "wires": [
+            [
+                "48a7383a656b97ca"
+            ]
+        ]
+    },
+    {
+        "id": "8bbbe489bb20a123",
+        "type": "ui_switch",
+        "z": "3f071b089819a85a",
+        "name": "Bomba 2",
+        "label": "Bomba 2",
+        "tooltip": "",
+        "group": "b4b5054b5011a136",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 180,
+        "y": 120,
+        "wires": [
+            [
+                "c9a8b1ddd772639d"
+            ]
+        ]
+    },
+    {
+        "id": "e1ee7e1fdfc64f50",
+        "type": "ui_switch",
+        "z": "3f071b089819a85a",
+        "name": "Agitador",
+        "label": "Agitador",
+        "tooltip": "",
+        "group": "b4b5054b5011a136",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 180,
+        "y": 160,
+        "wires": [
+            [
+                "4f0392057f400dea"
+            ]
+        ]
+    },
+    {
+        "id": "9dacc7d9c3b0f87f",
+        "type": "ui_slider",
+        "z": "3f071b089819a85a",
+        "name": "Velocidade Bomba 1",
+        "label": "Velocidade Bomba 1",
+        "tooltip": "",
+        "group": "c41f65a39a99c675",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "3200",
+        "step": 1,
+        "className": "",
+        "x": 1420,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8f5f0d2850d0d945",
+        "type": "ui_slider",
+        "z": "3f071b089819a85a",
+        "name": "Velocidade Bomba 2",
+        "label": "Velocidade Bomba 2",
+        "tooltip": "",
+        "group": "c41f65a39a99c675",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "3200",
+        "step": 1,
+        "className": "",
+        "x": 1420,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4a06a96b2c5d5558",
+        "type": "ui_gauge",
+        "z": "3f071b089819a85a",
+        "name": "PT100 - Brassagem",
+        "group": "062c8f26ed5d8543",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "PT100 - Brassagem",
+        "label": "ºC",
+        "format": "{{value | number:1 }}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "45",
+        "seg2": "70",
+        "diff": false,
+        "className": "",
+        "x": 1420,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "82f212dea33d4969",
+        "type": "ui_gauge",
+        "z": "3f071b089819a85a",
+        "name": "PT100 - Fervura",
+        "group": "ace7d5b75ebe2630",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "PT100 - Fervura",
+        "label": "ºC",
+        "format": "{{value | number:1 }}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "45",
+        "seg2": "70",
+        "diff": false,
+        "className": "",
+        "x": 1400,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "959b7040bfc7f432",
+        "type": "ui_gauge",
+        "z": "3f071b089819a85a",
+        "name": "PT100 - Trocador de Calor",
+        "group": "720a4d604b9abdc3",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "PT100 - Trocador de Calor",
+        "label": "ºC",
+        "format": "{{value | number:1 }}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "45",
+        "seg2": "70",
+        "diff": false,
+        "className": "",
+        "x": 1440,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "0edef3e9d96d1b18",
+        "type": "ui_gauge",
+        "z": "3f071b089819a85a",
+        "name": "PT100 - Água Quente",
+        "group": "c528815552b71b5e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "PT100 - Água Quente",
+        "label": "ºC",
+        "format": "{{value | number:1 }}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "45",
+        "seg2": "70",
+        "diff": false,
+        "className": "",
+        "x": 1420,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "1ebfec926eae37b7",
+        "type": "ui_chart",
+        "z": "3f071b089819a85a",
+        "name": "Fervura Gráfico",
+        "group": "d045d03c2fa71e8e",
+        "order": 1,
+        "width": "28",
+        "height": "11",
+        "label": "Fervura - Gráfico",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7700",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1400,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6acee9c889ef14e6",
+        "type": "ui_chart",
+        "z": "3f071b089819a85a",
+        "name": "Água Quente Gráfico",
+        "group": "9389dd4d08049608",
+        "order": 1,
+        "width": "28",
+        "height": "11",
+        "label": "Água Quente - Gráfico",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7700",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1420,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d88fb71e0655d7c6",
+        "type": "ui_chart",
+        "z": "3f071b089819a85a",
+        "name": "Trocador de Calor Gráfico",
+        "group": "c0c9a5387de52740",
+        "order": 1,
+        "width": "28",
+        "height": "11",
+        "label": "Trocador de calor - Gráfico",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7700",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1430,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "893755d27bab453f",
+        "type": "ui_chart",
+        "z": "3f071b089819a85a",
+        "name": "Gráfico Brassagem",
+        "group": "eb7d0194aeaddda1",
+        "order": 0,
+        "width": "28",
+        "height": "11",
+        "label": "Gráfico Brassagem",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7700",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1410,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "77c7f4d2f37aac48",
+        "type": "ui_led",
+        "z": "3f071b089819a85a",
+        "order": 1,
+        "group": "873eb4801af42253",
+        "width": 0,
+        "height": 0,
+        "label": "Chave Mostura",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Chave Mostura",
+        "x": 1400,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "f9460abdf95250ea",
+        "type": "ui_led",
+        "z": "3f071b089819a85a",
+        "order": 2,
+        "group": "873eb4801af42253",
+        "width": 0,
+        "height": 0,
+        "label": "Chave Fervura",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Chave Fervura",
+        "x": 1400,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "9f7a4e2bf80dc1f7",
+        "type": "ui_led",
+        "z": "3f071b089819a85a",
+        "order": 3,
+        "group": "873eb4801af42253",
+        "width": 0,
+        "height": 0,
+        "label": "Chave Água Quente",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Chave Água Quente",
+        "x": 1420,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "b851924e080acea0",
+        "type": "ui_led",
+        "z": "3f071b089819a85a",
+        "order": 1,
+        "group": "1cca622b57be5b10",
+        "width": 0,
+        "height": 0,
+        "label": "Agitador",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Agitador",
+        "x": 1380,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "2a87c136335dc235",
+        "type": "ui_led",
+        "z": "3f071b089819a85a",
+        "order": 2,
+        "group": "1cca622b57be5b10",
+        "width": 0,
+        "height": 0,
+        "label": "Bomba 1",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Bomba 1",
+        "x": 1380,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "414e5743b07e8870",
+        "type": "ui_led",
+        "z": "3f071b089819a85a",
+        "order": 3,
+        "group": "1cca622b57be5b10",
+        "width": 0,
+        "height": 0,
+        "label": "Bomba 2",
+        "labelPlacement": "left",
+        "labelAlignment": "center",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Bomba 2",
+        "x": 1380,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "2f8b32b91d1fe27e",
+        "type": "ui_text",
+        "z": "3f071b089819a85a",
+        "group": "ef85ba30baf4e863",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Receita",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1380,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "59f483515d2c7344",
+        "type": "ui_text",
+        "z": "3f071b089819a85a",
+        "group": "c41f65a39a99c675",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Vazão Bomba 2 (MLP) :",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1230,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "ae171061bd034672",
+        "type": "thingspeak42",
+        "z": "3f071b089819a85a",
+        "name": "Cervejaria",
+        "delay": "1",
+        "topic1": "Brassagem",
+        "topic2": "Fervura",
+        "topic3": "Água Quente",
+        "topic4": "Trocador de Calor",
+        "topic5": "",
+        "topic6": "",
+        "topic7": "",
+        "topic8": "",
+        "endpoint": "https://thingspeak.com",
+        "x": 3110,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "eb584acfaffa95dd",
+        "type": "switch",
+        "z": "3f071b089819a85a",
+        "name": "Switch",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "PT100 - Brassagem : ns=4;i=57",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Setpoint - Brassagem : ns=4;i=13",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "PWM - Brassagem : ns=4;i=1249",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1170,
+        "y": 160,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "630d1038e552d418",
+        "type": "switch",
+        "z": "3f071b089819a85a",
+        "name": "Switch",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "PT100 - Fervura : ns=4;i=56",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Setpoint - Fervura : ns=4;i=799",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "PWM - Fervura : ns=4;i=1139",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1170,
+        "y": 340,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "283bf7f581a32f84",
+        "type": "switch",
+        "z": "3f071b089819a85a",
+        "name": "Switch",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "PT100 - Água Quente : ns=4;i=55",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Setpoint - Água Quente : ns=4;i=6",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "PWM - Água Quente : ns=4;i=1341",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 1170,
+        "y": 500,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "6a95d479c4a5bd80",
+        "type": "switch",
+        "z": "3f071b089819a85a",
+        "name": "Switch",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "PT100 - Trocador de Calor : ns=4;i=54",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1170,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "18427777552a1337",
+        "type": "switch",
+        "z": "3f071b089819a85a",
+        "name": "Switch",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Chave Mostura : ns=4;i=1428",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Chave Fervura : ns=4;i=1427",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Chave Água Quente : ns=4;i=1424",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Chave Agitador : ns=4;i=1423",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Chave Bomba 1 : ns=4;i=1425",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Chave Bomba 2 : ns=4;i=1426",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 6,
+        "x": 1170,
+        "y": 940,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "cd600cf1ccbc8357",
+        "type": "switch",
+        "z": "3f071b089819a85a",
+        "name": "Switch",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Velocidade Bomba 1 : ns=4;i=789",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Velocidade Bomba 2 : ns=4;i=787",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1170,
+        "y": 1140,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "5de7ac4a9369d9b0",
+        "type": "switch",
+        "z": "3f071b089819a85a",
+        "name": "Switch",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ns=4;i=1020",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1170,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1e2eb25b634fdccb",
+        "type": "inject",
+        "z": "3f071b089819a85a",
+        "name": "Timer 1m",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 1770,
+        "y": 680,
+        "wires": [
+            [
+                "36cb07dc694fe5b7",
+                "ae183fe122398e2c",
+                "b6f316ee9f67edfe",
+                "83bbb362fe804609"
+            ]
+        ]
+    },
+    {
+        "id": "36cb07dc694fe5b7",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "PT100 - Brassagem : ns=4;i=57",
+        "datatype": "Float",
+        "value": "",
+        "name": "PT100 - Brassagem",
+        "x": 2000,
+        "y": 620,
+        "wires": [
+            [
+                "5c5e8809f1ce9c6f"
+            ]
+        ]
+    },
+    {
+        "id": "ae183fe122398e2c",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "PT100 - Fervura : ns=4;i=56",
+        "datatype": "Float",
+        "value": "",
+        "name": "PT100 - Fervura",
+        "x": 2000,
+        "y": 660,
+        "wires": [
+            [
+                "5c5e8809f1ce9c6f"
+            ]
+        ]
+    },
+    {
+        "id": "b6f316ee9f67edfe",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "PT100 - Água Quente : ns=4;i=55",
+        "datatype": "Float",
+        "value": "",
+        "name": "PT100 - Água Quente",
+        "x": 2000,
+        "y": 700,
+        "wires": [
+            [
+                "5c5e8809f1ce9c6f"
+            ]
+        ]
+    },
+    {
+        "id": "83bbb362fe804609",
+        "type": "OpcUa-Item",
+        "z": "3f071b089819a85a",
+        "item": "PT100 - Trocador de Calor : ns=4;i=54",
+        "datatype": "Float",
+        "value": "",
+        "name": "PT100 - Trocador de Calor",
+        "x": 2000,
+        "y": 740,
+        "wires": [
+            [
+                "5c5e8809f1ce9c6f"
+            ]
+        ]
+    },
+    {
+        "id": "5c5e8809f1ce9c6f",
+        "type": "OpcUa-Client",
+        "z": "3f071b089819a85a",
+        "endpoint": "08630897d509378a",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": "5",
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "useTransport": false,
+        "maxChunkCount": "",
+        "maxMessageSize": "",
+        "receiveBufferSize": "",
+        "sendBufferSize": "",
+        "name": "OPC UA_Read",
+        "x": 2260,
+        "y": 680,
+        "wires": [
+            [
+                "0cf75cff84c99805"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "0cf75cff84c99805",
+        "type": "switch",
+        "z": "3f071b089819a85a",
+        "name": "Switch",
+        "property": "browseName",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "PT100 - Brassagem",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "PT100 - Fervura",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "PT100 - Água Quente",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "PT100 - Trocador de Calor",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 2430,
+        "y": 680,
+        "wires": [
+            [
+                "bf89d959d8a5a592"
+            ],
+            [
+                "67618207a660b627"
+            ],
+            [
+                "8bcd32268daadc56"
+            ],
+            [
+                "faa442bca08e5cdf"
+            ]
+        ]
+    },
+    {
+        "id": "bf89d959d8a5a592",
+        "type": "function",
+        "z": "3f071b089819a85a",
+        "name": "Brassagem",
+        "func": "msg.topic = \"Brassagem\";\nmsg.payload = Math.round((msg.payload) * 100) / 100;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2630,
+        "y": 620,
+        "wires": [
+            [
+                "6d5c8ad4a2197bbb"
+            ]
+        ]
+    },
+    {
+        "id": "67618207a660b627",
+        "type": "function",
+        "z": "3f071b089819a85a",
+        "name": "Fervura",
+        "func": "msg.topic = \"Fervura\";\nmsg.payload = Math.round((msg.payload) * 100) / 100;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2620,
+        "y": 660,
+        "wires": [
+            [
+                "6d5c8ad4a2197bbb"
+            ]
+        ]
+    },
+    {
+        "id": "8bcd32268daadc56",
+        "type": "function",
+        "z": "3f071b089819a85a",
+        "name": "Água Quente",
+        "func": "msg.topic = \"Field 3\";\nmsg.payload = Math.round((msg.payload) * 100) / 100;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2630,
+        "y": 700,
+        "wires": [
+            [
+                "6d5c8ad4a2197bbb"
+            ]
+        ]
+    },
+    {
+        "id": "faa442bca08e5cdf",
+        "type": "function",
+        "z": "3f071b089819a85a",
+        "name": "Trocador de Calor",
+        "func": "msg.topic = \"Field 4\";\nmsg.payload = Math.round((msg.payload) * 100) / 100;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2650,
+        "y": 740,
+        "wires": [
+            [
+                "6d5c8ad4a2197bbb"
+            ]
+        ]
+    },
+    {
+        "id": "6d5c8ad4a2197bbb",
+        "type": "join",
+        "z": "3f071b089819a85a",
+        "name": "",
+        "mode": "custom",
+        "build": "string",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": ",",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "3",
+        "count": "4",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 2830,
+        "y": 680,
+        "wires": [
+            [
+                "0afa93c05a946b42"
+            ]
+        ]
+    },
+    {
+        "id": "0afa93c05a946b42",
+        "type": "function",
+        "z": "3f071b089819a85a",
+        "name": "",
+        "func": "const data = msg.payload.split(\",\");\nmsg.field1 = data[0];\nmsg.field2 = data[1];\nmsg.field3 = data[2];\nmsg.field4 = data[3];\nmsg.payload = \"api.thingspeak.com/update?api_key=BJZJ99M74IVO93K0&field1=\" + data[0] + \"&field2=\" + data[1] + \"&field3=\" + data[2] + \"&field4=\" + data[3];\nmsg.topic = \"Brassagem\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2960,
+        "y": 680,
+        "wires": [
+            [
+                "ae171061bd034672"
+            ]
+        ]
+    }
+]

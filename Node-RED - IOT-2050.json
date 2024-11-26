@@ -955,8 +955,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "Record tshark",
-        "x": 360,
-        "y": 1180,
+        "x": 660,
+        "y": 1360,
         "wires": [
             [],
             [],
@@ -2091,8 +2091,8 @@
         "topic7": "",
         "topic8": "",
         "endpoint": "https://thingspeak.com",
-        "x": 3110,
-        "y": 680,
+        "x": 2870,
+        "y": 400,
         "wires": []
     },
     {
@@ -2594,7 +2594,7 @@
         "reduceInit": "",
         "reduceInitType": "",
         "reduceFixup": "",
-        "x": 2830,
+        "x": 2850,
         "y": 680,
         "wires": [
             [
@@ -2607,18 +2607,38 @@
         "type": "function",
         "z": "3f071b089819a85a",
         "name": "",
-        "func": "const data = msg.payload.split(\",\");\nmsg.field1 = data[0];\nmsg.field2 = data[1];\nmsg.field3 = data[2];\nmsg.field4 = data[3];\nmsg.payload = \"api.thingspeak.com/update?api_key=BJZJ99M74IVO93K0&field1=\" + data[0] + \"&field2=\" + data[1] + \"&field3=\" + data[2] + \"&field4=\" + data[3];\nmsg.topic = \"Brassagem\";\nreturn msg;",
+        "func": "const data = msg.payload.split(\",\");\nmsg.payload.field1 = data[0];\nmsg.payload.field2 = data[1];\nmsg.payload.field3 = data[2];\nmsg.payload.field4 = data[3];\nmsg.url = \"https://api.thingspeak.com/update?api_key=BJZJ99M74IVO93K0&field1=\" + data[0] + \"&field2=\" + data[1] + \"&field3=\" + data[2] + \"&field4=\" + data[3];\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2960,
+        "x": 3000,
         "y": 680,
         "wires": [
             [
-                "ae171061bd034672"
+                "46e4d5919f6519ce"
             ]
+        ]
+    },
+    {
+        "id": "46e4d5919f6519ce",
+        "type": "http request",
+        "z": "3f071b089819a85a",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 3170,
+        "y": 680,
+        "wires": [
+            []
         ]
     }
 ]
